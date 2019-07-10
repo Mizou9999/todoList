@@ -120,12 +120,8 @@
 		var data = JSON.parse(localStorage[this._dbName]);
 		var todos = data.todos;
 		var todoId;
+		// usless for loop because the id is already the same 
 
-		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == id) {
-				todoId = todos[i].id;
-			}
-		}
 
 		for (var i = 0; i < todos.length; i++) {
 			if (todos[i].id == todoId) {
