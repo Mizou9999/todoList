@@ -119,8 +119,8 @@
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
 		var todos = data.todos;
-		var todoId;
-		// chenged the for loop with foreach and delete the old for loop 
+
+		// chenged the for loop with foreach and delete the old for loop .
 		todos.forEach(todo => {
 			if (todo.id == id) {
 				todos.splice(1)
