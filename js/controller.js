@@ -121,14 +121,9 @@
 	 */
 	Controller.prototype.editItemSave = function (id, title) {
 		var self = this
+		// delete two while loops and use just trim()
+		title = title.trim()
 
-		while (title[0] === " ") {
-			title = title.slice(1)
-		}
-
-		while (title[title.length - 1] === " ") {
-			title = title.slice(0, -1)
-		}
 
 		if (title.length !== 0) {
 			self.model.update(id, { title: title }, function () {
