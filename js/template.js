@@ -31,13 +31,13 @@
 	 */
 	function Template() {
 		this.defaultTemplate
-		=	'<li data-id="{{id}}" class="{{completed}}">'
-		+		'<div class="view">'
-		+			'<input class="toggle" type="checkbox" {{checked}}>'
-		+			'<label>{{title}}</label>'
-		+			'<button class="destroy"></button>'
-		+		'</div>'
-		+	'</li>';
+			= '<li data-id="{{id}}" class="{{completed}}">'
+			+ '<div class="view">'
+			+ '<input class="toggle" type="checkbox" {{checked}}>'
+			+ '<label>{{title}}</label>'
+			+ '<button class="destroy"></button>'
+			+ '</div>'
+			+ '</li>';
 	}
 
 	/**
@@ -60,7 +60,6 @@
 	Template.prototype.show = function (data) {
 		var i, l;
 		var view = '';
-
 		for (i = 0, l = data.length; i < l; i++) {
 			var template = this.defaultTemplate;
 			var completed = '';

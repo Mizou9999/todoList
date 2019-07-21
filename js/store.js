@@ -85,6 +85,7 @@
 		let newId = Date.now();
 
 
+
 		// If an ID was actually given, find the item and update each property
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
@@ -118,16 +119,10 @@
 	 */
 	Store.prototype.remove = function (id, callback) {
 		var data = JSON.parse(localStorage[this._dbName]);
-		var todos = data.todos;
-		var todoId;
-		// usless for loop because the id is already the same so  we need to just splice in the first one 
-		for (var i = 0; i < todos.length; i++) {
-			if (todos[i].id == id) {
-				todos.splice(i, 1);
-			}
-		}
+		// replace for loop with filter
+		data.todos = data.todos.filter(todo => todo.id !== id)
 		localStorage[this._dbName] = JSON.stringify(data);
-		callback.call(this, todos);
+		callback.call(this, data.todos);
 	};
 
 	/**
