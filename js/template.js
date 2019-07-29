@@ -77,7 +77,7 @@
 
 			view = view + template;
 		}
-
+		console.log(view)
 		return view;
 	};
 
