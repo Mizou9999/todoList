@@ -274,7 +274,7 @@ describe("controller", function() {
 			subject.setView("")
 			view.trigger("itemRemove", { id: 42 })
 
-			expect(model.remove).toHaveBeenCalledWith(22, jasmine.any(Function))
+			expect(model.remove).toHaveBeenCalledWith(42, jasmine.any(Function))
 		})
 
 		it("should remove an entry from the view", function() {
