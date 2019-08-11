@@ -1,52 +1,67 @@
 /*global NodeList */
-(function (window) {
-	'use strict';
-
+/**
+ * Help to manipulate the DOM
+ */
+;(function(window) {
+	"use strict"
+	/**
+	 * Help to slect elements by thier classes
+	 */
 	// Get element(s) by CSS selector:
-	window.qs = function (selector, scope) {
-		return (scope || document).querySelector(selector);
-	};
-	window.qsa = function (selector, scope) {
-		return (scope || document).querySelectorAll(selector);
-	};
-
+	window.qs = function(selector, scope) {
+		return (scope || document).querySelector(selector)
+	}
+	/**
+	 * Help to select all elements by thier class
+	 */
+	window.qsa = function(selector, scope) {
+		return (scope || document).querySelectorAll(selector)
+	}
+	/**
+	 * Add event listener to an element
+	 */
 	// addEventListener wrapper:
-	window.$on = function (target, type, callback, useCapture) {
-		target.addEventListener(type, callback, !!useCapture);
-	};
-
+	window.$on = function(target, type, callback, useCapture) {
+		target.addEventListener(type, callback, !!useCapture)
+	}
+	/**
+	 * Add the event listner to all elements matching the selector
+	 */
 	// Attach a handler to event for all elements that match the selector,
 	// now or in the future, based on a root element
-	window.$delegate = function (target, selector, type, handler) {
+	window.$delegate = function(target, selector, type, handler) {
 		function dispatchEvent(event) {
-			var targetElement = event.target;
-			var potentialElements = window.qsa(selector, target);
-			var hasMatch = Array.prototype.indexOf.call(potentialElements, targetElement) >= 0;
+			var targetElement = event.target
+			var potentialElements = window.qsa(selector, target)
+			var hasMatch =
+				Array.prototype.indexOf.call(potentialElements, targetElement) >= 0
 
 			if (hasMatch) {
-				handler.call(targetElement, event);
+				handler.call(targetElement, event)
 			}
 		}
 
 		// https://developer.mozilla.org/en-US/docs/Web/Events/blur
-		var useCapture = type === 'blur' || type === 'focus';
+		var useCapture = type === "blur" || type === "focus"
 
-		window.$on(target, type, dispatchEvent, useCapture);
-	};
-
+		window.$on(target, type, dispatchEvent, useCapture)
+	}
+	/**
+	 * Select the parent of an element based on its tag name
+	 */
 	// Find the element's parent with the given tag name:
 	// $parent(qs('a'), 'div');
-	window.$parent = function (element, tagName) {
+	window.$parent = function(element, tagName) {
 		if (!element.parentNode) {
-			return;
+			return
 		}
 		if (element.parentNode.tagName.toLowerCase() === tagName.toLowerCase()) {
-			return element.parentNode;
+			return element.parentNode
 		}
-		return window.$parent(element.parentNode, tagName);
-	};
+		return window.$parent(element.parentNode, tagName)
+	}
 
 	// Allow for looping on nodes by chaining:
 	// qsa('.foo').forEach(function () {})
-	NodeList.prototype.forEach = Array.prototype.forEach;
-})(window);
+	NodeList.prototype.forEach = Array.prototype.forEach
+})(window)

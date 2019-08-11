@@ -175,9 +175,11 @@ describe("controller", function() {
 		subject.setView("#/active")
 		expect(view.render).toHaveBeenCalledWith("setFilter", "active")
 	})
-	// if ('should highlight "Completed" filter when switching to active view', function () {
-
-	// })
+	it('should highlight "Completed" filter when switching to active view', function() {
+		setUpModel([])
+		subject.setView("#/completed")
+		expect(view.render).toHaveBeenCalledWith("setFilter", "completed")
+	})
 
 	describe("toggle all", function() {
 		it("should toggle all todos to completed", function() {
