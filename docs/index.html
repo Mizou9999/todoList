@@ -129,61 +129,65 @@
               
                 
                 <li><a
-                  href='#'
-                  class="">
-                  
-                  
+                  href='#helper'
+                  class=" toggle-sibling">
+                  Helper
+                  <span class='icon'>▸</span>
                 </a>
                 
-                </li>
-              
-                
-                <li><a
-                  href='#qs'
-                  class="">
-                  qs
+                <div class='toggle-target display-none'>
                   
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#qsa'
-                  class="">
-                  qsa
+                  <ul class='list-reset py1-ul pl1'>
+                    <li class='h5'><span>Static members</span></li>
+                    
+                      <li><a
+                        href='#helperqs'
+                        class='regular pre-open'>
+                        .qs
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperqsa'
+                        class='regular pre-open'>
+                        .qsa
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperon'
+                        class='regular pre-open'>
+                        .$on
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperdelegate'
+                        class='regular pre-open'>
+                        .$delegate
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperusecapture'
+                        class='regular pre-open'>
+                        .useCapture
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperparent'
+                        class='regular pre-open'>
+                        .$parent
+                      </a></li>
+                    
+                      <li><a
+                        href='#helperforeach'
+                        class='regular pre-open'>
+                        .forEach
+                      </a></li>
+                    
+                    </ul>
                   
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#on'
-                  class="">
-                  $on
                   
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#delegate'
-                  class="">
-                  $delegate
                   
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#parent'
-                  class="">
-                  $parent
                   
-                </a>
+                </div>
                 
                 </li>
               
@@ -1282,17 +1286,16 @@ number of todos.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id=''>
-      
+    <h3 class='fl m0' id='helper'>
+      Helper
     </h3>
     
     
   </div>
   
 
-  <p>Help to manipulate the DOM</p>
-
-    <div class='pre p1 fill-light mt0'></div>
+  
+    <div class='pre p1 fill-light mt0'>Helper</div>
   
   
 
@@ -1314,31 +1317,22 @@ number of todos.</p>
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Static Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='helperqs'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>qs(selector, scope)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
 
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='qs'>
-      qs
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Help to slect elements by thier classes</p>
+  <p>select element by className</p>
 
     <div class='pre p1 fill-light mt0'>qs(selector: any, scope: any)</div>
   
@@ -1391,23 +1385,22 @@ number of todos.</p>
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='helperqsa'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>qsa(selector, scope)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='qsa'>
-      qsa
-    </h3>
-    
-    
-  </div>
-  
 
-  <p>Help to select all elements by thier class</p>
+  <p>select all elements which have the same className</p>
 
     <div class='pre p1 fill-light mt0'>qsa(selector: any, scope: any)</div>
   
@@ -1460,20 +1453,19 @@ number of todos.</p>
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
+      </div>
+    </div>
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='on'>
-      $on
-    </h3>
-    
-    
-  </div>
+    <div class='border-bottom' id='helperon'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>$on(target, type, callback, useCapture)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Add event listener to an element</p>
@@ -1545,20 +1537,19 @@ number of todos.</p>
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
+      </div>
+    </div>
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='delegate'>
-      $delegate
-    </h3>
-    
-    
-  </div>
+    <div class='border-bottom' id='helperdelegate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>$delegate(target, selector, type, handler)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Add the event listner to all elements matching the selector</p>
@@ -1630,20 +1621,66 @@ number of todos.</p>
   
 </section>
 
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='helperusecapture'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>useCapture</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
   
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='parent'>
-      $parent
-    </h3>
-    
-    
-  </div>
+
+  <p>The blur event fires when an element has lost focus More info => <a href="https://developer.mozilla.org/en-US/docs/Web/Events/blur">https://developer.mozilla.org/en-US/docs/Web/Events/blur</a></p>
+
+    <div class='pre p1 fill-light mt0'>useCapture</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='helperparent'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>$parent(element, tagName)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
   
 
   <p>Select the parent of an element based on its tag name</p>
@@ -1689,6 +1726,67 @@ number of todos.</p>
   
 
   
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='helperforeach'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>forEach</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Allow for looping on nodes by chaining:qsa('.foo').forEach(function () {})qsa('.foo').forEach(function () {})</p>
+
+    <div class='pre p1 fill-light mt0'>forEach</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
 
   
 
