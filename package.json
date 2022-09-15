@@ -2,7 +2,7 @@
 	"private": true,
 	"dependencies": {
 		"diff": "^4.0.1",
-		"documentation": "^11.0.1",
+		"documentation": "^14.0.0",
 		"todomvc-app-css": "^2.2.0",
 		"todomvc-common": "^1.0.5"
 	},
